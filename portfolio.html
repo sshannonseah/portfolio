@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - My Work</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="other-page">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="portfolio.html" class="nav-item">Portfolio</a></li>
+            <li><a href="about.html" class="nav-item">About</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Works</h2>
+    <h3> Designs </h3>
+    <div class="card-container"> 
+      <div class="card">
+          <div class="card-front">
+              <img src="image1.jpg" alt="Design 1">
+          </div>
+          <div class="card-back">
+              <p>Designed this for fun during my free time to enhance my skills.</p>
+              <p>Tool(s) used: IbisPaint X</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-front">
+              <img src="image2.jpg" alt="Design 2">
+          </div>
+          <div class="card-back">
+              <p>Designed this for fun during my free time to enhance my skills.</p>
+              <p>Tool(s) used: IbisPaint X</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-front">
+              <img src="image3.jpg" alt="Design 3">
+          </div>
+          <div class="card-back">
+              <p>This was a poster to advertise the postcard I was giving away at an event.</p>
+              <p>Tool(s) used: IbisPaint X aand Canva</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-front">
+              <img src="image4.jpg" alt="Design 4">
+          </div>
+          <div class="card-back">
+              <p>This was a poster to advertise the postcard I was giving away at an event.</p>
+              <p>Tool(s) used: IbisPaint X</p>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-front">
+              <img src="image5.jpg" alt="Design 5">
+          </div>
+          <div class="card-back">
+              <p>This was a poster to advertise a photobooth event I hosted. It includes the photobooth frames, free gifts, and other information.</p>
+              <p>Tool(s) used: Illustrator</p>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-front">
+            <img src="image6.jpg" alt="Design 5">
+        </div>
+        <div class="card-back">
+            <p>This was a poster to advertise a photobooth event I hosted. It includes the photobooth frames, free gifts, and other information.</p>
+            <p>Tool(s) used: IbisPaint X</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <h3> Unity </h3>
+    <div class="video-container">
+        <img src="thumbnail1.jpg" alt="Video Thumbnail" class="video-thumbnail" id="videoThumbnail">
+        <span class="tooltip">Click to watch video</span>
+        <div class="modal" id="videoModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="modal-flex">
+                    <video controls id="videoPlayer">
+                        <source src="EscapeRoom.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-description">
+                        <h3>Video Description</h3>
+                        <p>This video showcases the escape room design process and some behind-the-scenes footage. Enjoy!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('videoModal');
+        const thumbnail = document.getElementById('videoThumbnail');
+        const closeModal = document.getElementById('closeModal');
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        // Open modal when thumbnail is clicked
+        thumbnail.onclick = function() {
+            modal.style.display = 'flex'; // Use 'flex' to center modal
+            videoPlayer.play(); // Play video when modal opens
+        }
+
+        // Close modal when the close button is clicked
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+            videoPlayer.pause(); // Pause video when modal closes
+            videoPlayer.currentTime = 0; // Reset video to start
+        }
+
+        // Close modal when clicking anywhere outside the modal content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                videoPlayer.pause(); // Pause video when modal closes
+                videoPlayer.currentTime = 0; // Reset video to start
+            }
+        }
+    </script>
+</body>
+</html>

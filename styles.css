@@ -1,0 +1,450 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Home page background */
+body.home-page {
+  font-family: Arial, sans-serif;
+  background-image: url('your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Other pages gradient background */
+body.other-page {
+  padding: 50px 20px;
+  text-align: center;
+  padding-top: 150px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, #ffffff, #f0bcd2);
+}
+
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+nav ul li {
+  font-size: 1.8rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #d9539f;
+}
+
+/* Navbar styling */ 
+.navbar {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent; /* Make navbar background transparent */
+  padding: 10px 20px;
+  z-index: 1; /* Ensure navbar appears on top */
+}
+
+/* Bubble effect for each nav item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.logo {
+  height: 100px; /* Adjust size as needed */
+  width: 100px;
+  margin-right: 8px; /* Spacing between logo and text */
+}
+
+/* Welcome Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  text-align: center;
+  color: #fff; /* Sets text color to white for better contrast */
+  background-image: url('background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed on scroll */
+  padding-top: 80px;
+}
+
+#home h1 {
+  font-size: 6rem;
+  color: #333;
+}
+
+.highlight {
+  font-family: 'Brush Script MT', cursive;
+  color: #333;
+  font-size: 8rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Portfolio Section */
+#portfolio {
+  padding: 50px 20px;
+  text-align: center;
+  padding-top: 150px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, #ffffff, #f0bcd2);
+}
+
+#portfolio h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#portfolio h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #d362a2;
+}
+
+#portfolio h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #d362a2;
+}
+
+.portfolio-gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 0;
+  padding-top: 80px;
+}
+
+.portfolio-gallery img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  padding-top: 80px;
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding-top: 80px;
+}
+
+.profile-pic {
+  width: 500px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the cards */
+  flex-wrap: wrap; /* Allow wrapping if there are too many cards */
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  width: 400px; /* Adjust the width as needed */
+  height: 600px; /* Fixed height, can adjust if necessary */
+  perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s;
+}
+
+.card-front {
+  background-color: #fff;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 20px;
+  text-align: center;
+  transform: rotateY(180deg);
+  flex-direction: column; /* Stack paragraphs vertically */
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.card-back p {
+  margin: 10px 0; 
+}
+
+/* Flip Effect */
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+.spacer {
+  height: 40px; /* Adjust height as needed */
+}
+
+
+/* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  max-width: 1300px; /* Adjust max-width as needed */
+  width: 95%; /* Full width but max width */
+}
+
+.modal-flex {
+  display: flex; /* Use flexbox for side-by-side layout */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between video and description */
+}
+
+video {
+  width: 900px; 
+  height: 800px; 
+}
+
+.video-description {
+  max-width: 1000px; /* Set a max width for the description */
+  color: black; /* Change color for better visibility */
+  text-align: left; /* Align text to the left */
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 1200px; /* Adjust as needed */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.video-container:hover .tooltip {
+  visibility: visible;
+}
+
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #d9539f; /* Change color on hover */
+}
+
+
+/* Navigation Styling */
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 20px 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+header nav ul li a.active {
+  color: #e38aa7;
+}
+
+
+/* Main Content Styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Full viewport height */
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form label {
+  font-size: 14px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e38aa7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #d17a90;
+}
+
+/* Footer Contact Info */
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
