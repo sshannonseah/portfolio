@@ -10,7 +10,7 @@
 /* Home page background */
 body.home-page {
   font-family: Arial, sans-serif;
-  background-image: url('your-background-image.jpg');
+  background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@ nav ul li a:hover {
   left: 50%;
   transform: translateX(-50%);
   background: transparent; /* Make navbar background transparent */
-  padding: 10px 20px;
+  padding: 8px 10px;
   z-index: 1; /* Ensure navbar appears on top */
 }
 
