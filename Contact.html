@@ -17,10 +17,10 @@
         <li><a href="contact.html" class="nav-item">Contact</a></li>
     </ul>
 </nav>
-
-<main>
-  <h1>Contact me</h1>
-  <form class="contact-form">
+<div class="container">
+  <main>
+    <h1>Contact me</h1>
+    <form class="contact-form" action="https://formspree.io/f/mnnqdbld" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -31,18 +31,33 @@
       <textarea id="message" name="message" required></textarea>
 
       <button type="submit" class="submit-button">submit</button>
-  </form>
-</main>
+    </form>
+
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/shannon-seah/" target="_blank">
+          <img src="linkedin.png" alt="linkedin" class="social-icon">
+      </a>
+      <a href="https://github.com/sshannonseah" target="_blank">
+          <img src="github.png" alt="Twitter" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/ss.hannon/" target="_blank">
+          <img src="instagram.png" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://www.youtube.com/@ss.hannon" target="_blank">
+        <img src="youtube.png" alt="Instagram" class="social-icon">
+    </a>
+  </div>
+  </main>
+
+  <!-- Social Media Icons -->
+</div>
 
 <footer>
   <div class="contact-info">
-      <span class="email">
-          📧 23018646@myrp.edu.sg
-      </span>
-      <span class="phone">
-          📞 +65 9093 8106
-      </span>
+      <span class="email"> <img src="email.png" alt="email" class="icon"> 23018646@myrp.edu.sg</span>
+      <span class="phone" ><img src="phone.png" alt="phone" class="icon"> +65 9093 8105</span>
   </div>
 </footer>
+
 </body>
 </html>
