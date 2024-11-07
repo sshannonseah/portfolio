@@ -3,8 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio - About</title>
+  <title>My Portfolio - Contact</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-form {
+      transition: visibility 0s, opacity 0.3s ease;
+    }
+    /* Ensures the form appears without any layout shifts */
+    .contact-form.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+    .contact-form.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 </head>
 <body class="other-page">
 
@@ -16,48 +30,85 @@
         <li><a href="about.html" class="nav-item">About</a></li>
         <li><a href="Contact.html" class="nav-item">Contact</a></li>
     </ul>
-</nav>
-<div class="container">
-  <main>
-    <h1>Contact me</h1>
-    <form class="contact-form" action="https://formspree.io/f/mnnqdbld" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+  </nav>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+  <div class="container">
+    <main>
+      <h1>Contact me</h1>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+      <!-- Form with id="contactForm" -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnqdbld" method="POST" onsubmit="return showConfirmation(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <button type="submit" class="submit-button">submit</button>
-    </form>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-    <div class="social-media">
-      <a href="https://www.linkedin.com/in/shannon-seah/" target="_blank">
-          <img src="images/linkedin.png" alt="linkedin" class="social-icon">
-      </a>
-      <a href="https://github.com/sshannonseah" target="_blank">
-          <img src="images/github.png" alt="Twitter" class="social-icon">
-      </a>
-      <a href="https://www.instagram.com/ss.hannon/" target="_blank">
-          <img src="images/instagram.png" alt="Instagram" class="social-icon">
-      </a>
-      <a href="https://www.youtube.com/@ss.hannon" target="_blank">
-        <img src="images/youtube.png" alt="Instagram" class="social-icon">
-    </a>
-  </div>
-  </main>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
 
-  <!-- Social Media Icons -->
-</div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
 
-<footer>
-  <div class="contact-info">
-      <span class="email"> <img src="images/email.png" alt="email" class="icon"> 23018646@myrp.edu.sg</span>
-      <span class="phone" ><img src="images/phone.png" alt="phone" class="icon"> +65 9093 8105</span>
-  </div>
-</footer>
+      <!-- Confirmation Message (hidden by default) -->
+      <div id="confirmationMessage" style="display: none;">
+        <p>Thank you for your message! We will get back to you soon.</p>
+        <!-- Button to allow the user to submit another form -->
+        <button onclick="resetForm()">Submit another form</button>
+      </div>
+
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/shannon-seah/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/sshannonseah" target="_blank">
+            <img src="images/github.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/ss.hannon/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.youtube.com/@ss.hannon" target="_blank">
+          <img src="images/youtube.png" alt="YouTube" class="social-icon">
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer with contact info -->
+    <footer>
+      <div class="contact-info">
+        <span class="email"><img src="images/email.png" alt="email" class="icon"> 23018646@myrp.edu.sg</span>
+        <span class="phone"><img src="images/phone.png" alt="phone" class="icon"> +65 9093 8105</span>
+      </div>
+    </footer>
+
+    <script>
+      function showConfirmation(event) {
+        // Prevent the default form submission (so we stay on the page)
+        event.preventDefault();
+        
+        // Hide the form after submission by adding the "hidden" class
+        document.getElementById('contactForm').classList.add('hidden');
+        
+        // Show the confirmation message
+        document.getElementById('confirmationMessage').style.display = 'block';
+        
+        // Reset the form fields
+        document.getElementById('contactForm').reset();
+      }
+
+      // Function to reset the form and show it again for a new submission
+      function resetForm() {
+        // Hide the confirmation message
+        document.getElementById('confirmationMessage').style.display = 'none';
+        
+        // Show the form again by removing the "hidden" class
+        document.getElementById('contactForm').classList.remove('hidden');
+        
+        // Ensure the form is visible again and reset fields
+        document.getElementById('contactForm').reset();
+      }
+    </script>
 
 </body>
 </html>
+
