@@ -50,10 +50,10 @@
         <button type="submit" class="submit-button">Submit</button>
       </form>
 
-      <!-- Confirmation Message (hidden by default) -->
+
       <div id="confirmationMessage" style="display: none;">
         <p>Thank you for your message! We will get back to you soon.</p>
-        <!-- Button to allow the user to submit another form -->
+ 
         <button onclick="resetForm()">Submit another form</button>
       </div>
 
@@ -82,33 +82,16 @@
     </footer>
 
     <script>
-      function showConfirmation(event) {
-        // Prevent the default form submission (so we stay on the page)
-        event.preventDefault();
-        
-        // Hide the form after submission by adding the "hidden" class
-        document.getElementById('contactForm').classList.add('hidden');
-        
-        // Show the confirmation message
-        document.getElementById('confirmationMessage').style.display = 'block';
-        
-        // Reset the form fields
-        document.getElementById('contactForm').reset();
-      }
+      function submitForm(event) {
+      // Prevent the default form submission (so we stay on the page)
+      event.preventDefault();
+  
+      // Submit the form to Formspree
+      document.getElementById('contactForm').submit(); 
+}
 
-      // Function to reset the form and show it again for a new submission
-      function resetForm() {
-        // Hide the confirmation message
-        document.getElementById('confirmationMessage').style.display = 'none';
-        
-        // Show the form again by removing the "hidden" class
-        document.getElementById('contactForm').classList.remove('hidden');
-        
-        // Ensure the form is visible again and reset fields
-        document.getElementById('contactForm').reset();
-      }
+
     </script>
 
 </body>
 </html>
-

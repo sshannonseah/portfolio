@@ -38,13 +38,13 @@ nav {
   background-color: #fff;
 }
 
-nav ul {
+nav ul, .portfolio-navbar ul {
   list-style: none;
   display: flex;
   gap: 35px;
 }
 
-nav ul li {
+nav ul li , .portfolio-navbar ul li{
   font-size: 1.5rem;
 }
 
@@ -71,7 +71,7 @@ nav ul li a:hover {
 }
 
 /* Bubble effect for each nav item */
-.nav-item {
+.nav-item , .portfolio-navbar ul li {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -86,6 +86,24 @@ nav ul li a:hover {
 .nav-item:hover {
   background-color: #f0f0f0;
   transform: scale(1.05);
+}
+
+.portfolio-navbar {
+  margin-top: 20px; 
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;  
+  align-items: center; 
+  padding: 10px 0;  
+}
+
+.portfolio-navbar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.portfolio-navbar ul li a:hover {
+  color: #d9539f;
 }
 
 .logo {
@@ -133,7 +151,7 @@ nav ul li a:hover {
   padding: 50px 20px;
   text-align: center;
   padding-top: 10px;
-  gap: 20px;
+  gap: 50px;
   flex-wrap: wrap;
   background: linear-gradient(to bottom, #ffffff, #f0bcd2);
 }
@@ -214,12 +232,26 @@ nav ul li a:hover {
   flex-wrap: wrap; /* Allow wrapping if there are too many cards */
   padding: 20px;
 }
-
 /* Card Styling */
-.card {
-  width: 300px; /* Adjust the width as needed */
-  height: 450px; /* Fixed height, can adjust if necessary */
+.card,
+.card1,
+.card2 {
   perspective: 1000px;
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+}
+
+.card1 {
+  width: 500px;
+  height: 600px;
+}
+
+.card2 {
+  width: 600px;
+  height: 400px;
 }
 
 .card-front,
@@ -247,28 +279,33 @@ nav ul li a:hover {
 .card-back {
   background-color: #f8f8f8;
   color: #333;
-  display: flex; /* Use flexbox for centering */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
   text-align: center;
   transform: rotateY(180deg);
-  flex-direction: column; /* Stack paragraphs vertically */
-  font-size: 18px; /* Adjust font size as needed */
+  flex-direction: column;
+  font-size: 18px;
 }
 
 .card-back p {
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 
-/* Flip Effect */
-.card:hover .card-front {
+/* Flip Effect for Each Card */
+.card:hover .card-front,
+.card1:hover .card-front,
+.card2:hover .card-front {
   transform: rotateY(180deg);
 }
 
-.card:hover .card-back {
+.card:hover .card-back,
+.card1:hover .card-back,
+.card2:hover .card-back {
   transform: rotateY(0);
 }
+
 
 .spacer {
   height: 40px; /* Adjust height as needed */
@@ -493,3 +530,6 @@ footer {
   transition: transform 0.3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
