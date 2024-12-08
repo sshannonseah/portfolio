@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio - My Work</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body class="other-page">
     <!-- Navigation Bar -->
@@ -84,7 +84,7 @@
             <p>Tool(s) used: IbisPaint X</p>
         </div>
        </div>
-       <div class="card1">
+       <div class="card">
         <div class="card-front">
             <img src="images/namecard.jpg" alt="Design 5">
         </div>
@@ -93,18 +93,9 @@
             <p>Tool(s) used: Illustrator</p>
         </div>
        </div>
-       <div class="card1">
+       <div class="card">
         <div class="card-front">
-            <img src="images/namecard1.png" alt="Design 5">
-        </div>
-        <div class="card-back">
-            <p>Designed this namecard for school project</p>
-            <p>Tool(s) used: Illustrator</p>
-        </div>
-       </div>
-       <div class="card2">
-        <div class="card-front">
-            <img src="images/namecard2.png" alt="Design 5">
+            <img src="images/namecard2.jpg" alt="Design 5">
         </div>
         <div class="card-back">
             <p>Designed these chat stickers for a school assignment.</p>
@@ -112,60 +103,92 @@
         </div>
        </div>
     </div>
+        <div class="video-container1">
+          <img src="images/thumbnail2.jpg" alt="Video Thumbnail" class="video-thumbnail" id="videoThumbnail1">
+          <span class="tooltip">Click to watch video</span>
+          <div class="modal" id="videoModal1">
+            <div class="modal-content">
+              <span class="close" id="closeModal1">&times;</span>
+              <div class="modal-flex">
+                <video controls id="videoPlayer1">
+                  <source src="images/Hybrid.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-description">
+                  <h3>Figma - Hybrid</h3>
+                  <p> A high Fidelity of a application i want to create. It is a combination of Twitter, Instagram and Tiktok.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
     <div class="spacer"></div>
 
-    <h3> Development </h3>
+    <h3>Development</h3>
     <section id="development">
-    <div class="video-container">
-        <img src="images/thumbnail1.jpg" alt="Video Thumbnail" class="video-thumbnail" id="videoThumbnail">
+      <div class="video-container">
+        <!-- First Video -->
+        <img src="images/thumbnail1.jpg" alt="Video Thumbnail" class="video-thumbnail" id="videoThumbnail2">
         <span class="tooltip">Click to watch video</span>
-        <div class="modal" id="videoModal">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <div class="modal-flex">
-                    <video controls id="videoPlayer">
-                        <source src="images/EscapeRoom.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-description">
-                        <h3>Unity - Escape Room</h3>
-                        <p>This video is a Visual Reality game that I created from scratch using Unity. There are a lot of places that needs improvements but I definitely enjoyed the process of making this game. Enjoy!</p>
-                    </div>
-                </div>
+        <div class="modal" id="videoModal2">
+          <div class="modal-content">
+            <span class="close" id="closeModal2">&times;</span>
+            <div class="modal-flex">
+              <video controls id="videoPlayer2">
+                <source src="images/EscapeRoom.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-description">
+                <h3>Unity - Escape Room</h3>
+                <p>This video is a Visual Reality game that I created from scratch using Unity. There are a lot of places that need improvements, but I definitely enjoyed the process of making this game. Enjoy!</p>
+              </div>
             </div>
+          </div>
+        </div>
+    
+        <img src="images/travel.png" alt="Video Thumbnail" class="video-thumbnail" id="videoThumbnail3">
+        <span class="tooltip">Click to watch video</span>
+        <div class="modal" id="videoModal3">
+          <div class="modal-content">
+            <span class="close" id="closeModal3">&times;</span>
+            <div class="modal-flex">
+              <video controls id="videoPlayer3">
+                <source src="images/travel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-description">
+                <h3>React - Packing List</h3>
+                <p>Created this application where users can add items to keep track of their packing list.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
+    
     <script>
-        // Get modal elements
-        const modal = document.getElementById('videoModal');
-        const thumbnail = document.getElementById('videoThumbnail');
-        const closeModal = document.getElementById('closeModal');
-        const videoPlayer = document.getElementById('videoPlayer');
+      document.querySelectorAll('.video-thumbnail').forEach((thumbnail, index) => {
+      const modal = document.getElementById(`videoModal${index + 1}`);
+      const closeModal = modal.querySelector('.close');
 
-        // Open modal when thumbnail is clicked
-        thumbnail.onclick = function() {
-            modal.style.display = 'flex'; // Use 'flex' to center modal
-            videoPlayer.play(); // Play video when modal opens
-        }
+      // Open modal when clicking on the thumbnail
+      thumbnail.addEventListener('click', () => {
+      modal.style.display = 'block';
+      });
 
-        // Close modal when the close button is clicked
-        closeModal.onclick = function() {
-            modal.style.display = 'none';
-            videoPlayer.pause(); // Pause video when modal closes
-            videoPlayer.currentTime = 0; // Reset video to start
-        }
+      // Close modal when clicking on the close button
+      closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      });
 
-        // Close modal when clicking anywhere outside the modal content
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                videoPlayer.pause(); // Pause video when modal closes
-                videoPlayer.currentTime = 0; // Reset video to start
-            }
-        }
-    </script>
+      // Close modal when clicking outside of the modal content
+      window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+      modal.style.display = 'none';
+      }
+    });
+  });
+
+      </script>
 </body>
 </html>

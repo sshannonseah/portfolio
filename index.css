@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  /* Home page background */
+  body.home-page {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  
+  /* Other pages gradient background */
+  body.other-page {
+    font-family: Arial, sans-serif;
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 150px;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, #ffffff, #f0bcd2);
+  }
+  
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff;
+  }
+  
+  nav ul, .portfolio-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+  }
+  
+  nav ul li , .portfolio-navbar ul li{
+    font-size: 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li a:hover {
+    color: #d9539f;
+  }
+  
+  /* Navbar styling */ 
+  .navbar {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent; /* Make navbar background transparent */
+    padding: 8px 10px;
+    z-index: 1; /* Ensure navbar appears on top */
+  }
+  
+  /* Bubble effect for each nav item */
+  .nav-item , .portfolio-navbar ul li {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .portfolio-navbar {
+    margin-top: 20px; 
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;  
+    align-items: center; 
+    padding: 10px 0;  
+  }
+  
+  .portfolio-navbar ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .portfolio-navbar ul li a:hover {
+    color: #d9539f;
+  }
+  
+  .logo {
+    height: 100px; /* Adjust size as needed */
+    width: 100px;
+    margin-right: 8px; /* Spacing between logo and text */
+  }
+  
+  /* Welcome Section */
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    text-align: center;
+    color: #fff; /* Sets text color to white for better contrast */
+    background-image: url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed on scroll */
+    padding-top: 80px;
+  }
+  
+  #home h1 {
+    font-size: 6rem;
+    color: #333;
+  }
+  
+  .highlight {
+    font-family: 'Brush Script MT', cursive;
+    color: #333;
+    font-size: 10rem;
+  }
+  
+  #home p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  #overview {
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 10px;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  #overview h2 {
+    font-size: 4rem;
+    color: #333;
+  }
+  
