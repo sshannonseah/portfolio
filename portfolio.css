@@ -2,15 +2,16 @@
 nav {
   display: flex;
   justify-content: flex-start;
-  background-color: #fff;
 }
 
 nav ul, .portfolio-navbar ul {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 50px;
+  text-decoration: none;
 }
 
+  
 nav ul li , .portfolio-navbar ul li{
   font-size: 1.5rem;
 }
@@ -24,21 +25,21 @@ nav ul li a:hover {
   color: #d9539f;
 }
 
-/* Navbar styling */ 
-.navbar {
-  display: flex;
-  gap: 20px;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: transparent; /* Make navbar background transparent */
-  padding: 8px 10px;
-  z-index: 1; /* Ensure navbar appears on top */
-}
-
-/* Bubble effect for each nav item */
-.nav-item , .portfolio-navbar ul li {
+  /* Navbar styling */ 
+  .navbar {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent; /* Make navbar background transparent */
+    padding: 8px 10px;
+    z-index: 1; /* Ensure navbar appears on top */
+  }
+  
+/* Bubble effect for main nav items */
+.nav-item {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -55,20 +56,55 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
+/* Portfolio Section */
+#portfolio {
+  margin-top: 50px;
+}
+
+#portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Portfolio Navbar */
 .portfolio-navbar {
-  margin-top: 40px; 
   display: flex;
-  justify-content: center;  
-  align-items: center; 
-  padding: 50px 0;  
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.portfolio-navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.portfolio-navbar ul li {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-navbar ul li a {
   text-decoration: none;
   color: #333;
+  padding: 10px 20px;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Hover Effect for Portfolio Navbar */
+.portfolio-navbar ul li:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.05);
 }
 
 .portfolio-navbar ul li a:hover {
+  color: #fff;
   color: #d9539f;
 }
 
@@ -82,17 +118,17 @@ nav ul li a:hover {
 
 /* Portfolio Section */
 #portfolio {
-  padding: 50px 20px;
+  padding: 100px 20px;
   text-align: center;
-  padding-top: 10px;
   gap: 50px;
   flex-wrap: wrap;
-  background: linear-gradient(to bottom, #ffffff, #f0bcd2);
+  background: linear-gradient(to bottom, #ffffff, #edb2cb);
 }
 
 #portfolio h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  padding: 50px; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #portfolio h3 {
