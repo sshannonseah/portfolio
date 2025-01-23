@@ -82,7 +82,7 @@
 
   /* About Section */
 #about {
-    padding: 10px;
+    padding: 30px;
     text-align: center;
     min-height: 80vh; 
   }
@@ -97,7 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     gap: 30px; /* Space between image and text */
   }
@@ -105,8 +105,7 @@
 .about-text {
     font-size: 1.3rem;
     line-height: 1.5;
-    max-width: 500px; /* Limit text width */
-    text-align: left;
+    text-align: center;
   }
 
   .skills {
@@ -188,9 +187,8 @@
   }
   
   
-  
   /* Profile Picture Styling */
 .profile-pic {
-    width: 600px; /* Adjust size as needed */
+    width: 500px; /* Adjust size as needed */
     border-radius: 50%;
   }
