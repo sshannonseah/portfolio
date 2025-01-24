@@ -35,7 +35,7 @@ Reset */
     background-color: transparent;
     padding: 10px;
   }
-  
+
   .logo {
     height: 50px; /* Adjust size of logo */
     width: auto;
@@ -163,5 +163,46 @@ Reset */
     font-size: 4rem;
     color: #333;
   }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card img {
+    width: 250px;
+    height: 350px;
+    margin-bottom: 10px;
+  }
   
