@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom, #ffffff, #edb2cb);
+    background-size: cover; /* Ensures the background covers the viewport */
+    background-attachment: fixed; /* Makes the background stay fixed */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures it takes at least the full viewport height */
+  }
+#photo-details {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Photo Card Styles */
+.photo-card {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Increased gap between image and description */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Increased photo size */
+.photo-card img {
+    width: 300px; /* Increased width for larger photos */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-description {
+    flex: 1; 
+}
+
+.photo-description p {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.photo-description p:last-child {
+    margin-bottom: 0;
+}
+
+.back-button {
+    background-color: #ffffff;
+    border: 2px solid #ffa6c9; 
+    color: #000000;
+    font-family: 'Arial', sans-serif; 
+    font-size: 16px;
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+  }
+
+  .back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+  /* Hover Effect */
+.back-button:hover {
+    background-color: #ffa6c9; 
+    color: #000; 
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); 
+  }

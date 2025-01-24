@@ -8,7 +8,7 @@
   /* Other pages gradient background */
   body.other-page {
     font-family: Arial, sans-serif;
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
     padding-top: 150px;
     gap: 20px;
@@ -53,7 +53,7 @@
     transform: translateX(-50%);
     background: transparent; /* Make navbar background transparent */
     padding: 8px 10px;
-    z-index: 1; /* Ensure navbar appears on top */
+    z-index: 6; /* Ensure navbar appears on top */
   }
   
   /* Bubble effect for each nav item */
@@ -82,9 +82,9 @@
 
   /* About Section */
 #about {
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    min-height: 80vh; 
+    min-height: 70vh; 
   }
   
   #about h2 {
@@ -155,6 +155,18 @@
   .hobby h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+  }
+
+  .hobby h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    z-index: 6;
+  }
+
+  .hobby p {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    color: #000;
   }
   
   .photo-cards {
