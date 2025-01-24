@@ -181,7 +181,8 @@ Reset */
     border-radius: 10px;
     padding: 50px;
     text-align: center;
-    width: 300px;
+    width: 150px;
+    height: 250px;
     cursor: pointer;
   }
   
@@ -201,8 +202,12 @@ Reset */
   }
 
   .card img {
-    width: 250px;
-    height: 350px;
+    width: 150px;
+    height: 200px;
     margin-bottom: 10px;
   }
-  
+  .card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
