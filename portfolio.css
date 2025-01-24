@@ -147,18 +147,19 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .card {
   display: block;
   width: 200px;
-  border: 1px solid #ccc;
+  height: auto;
+  border: 3px solid #ccc;
   border-radius: 8px;
-  overflow: hidden;
   text-decoration: none;
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -231,6 +232,7 @@ video {
   justify-content: center; 
   gap: 20px; 
   flex-wrap: wrap; 
+  margin-top: 20px;
 }
 
 .video-thumbnail {
