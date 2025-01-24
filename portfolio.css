@@ -1,8 +1,13 @@
 /* Navigation Bar */
 nav {
   display: flex;
+  align-items: center; 
   justify-content: flex-start;
+  background-color: transparent;
+
 }
+
+
 
 nav ul, .portfolio-navbar ul {
   list-style: none;
@@ -36,6 +41,7 @@ nav ul li a:hover {
     background: transparent; /* Make navbar background transparent */
     padding: 8px 10px;
     z-index: 1; /* Ensure navbar appears on top */
+    font-family: Arial, Helvetica, sans-serif;
   }
   
 /* Bubble effect for main nav items */
@@ -108,11 +114,6 @@ nav ul li a:hover {
   color: #d9539f;
 }
 
-.logo {
-  height: 100px; /* Adjust size as needed */
-  width: 100px;
-  margin-right: 8px; /* Spacing between logo and text */
-}
 
 
 

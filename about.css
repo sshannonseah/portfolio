@@ -15,8 +15,7 @@
     flex-wrap: wrap;
     background: linear-gradient(to bottom, #ffffff, #f0bcd2);
   }
-  
-  
+
   /* Navigation Bar */
   nav {
     display: flex;
@@ -43,6 +42,8 @@
     color: #d9539f;
   }
   
+
+
   /* Navbar styling */ 
   .navbar {
     display: flex;
@@ -74,12 +75,6 @@
     transform: scale(1.05);
   }
   
-  .logo {
-    height: 100px; /* Adjust size as needed */
-    width: 100px;
-    margin-right: 8px; /* Spacing between logo and text */
-  }
-
   /* About Section */
 #about {
     padding: 20px;
@@ -107,6 +102,8 @@
     line-height: 1.5;
     text-align: center;
   }
+
+  
 
   .skills {
     display: flex;
